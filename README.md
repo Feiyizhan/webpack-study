@@ -13,11 +13,11 @@ module.exports = {
 
    在一个单独的文件中产生一个完整且功能完全的文件。这个文件具有最好的source map，但是它会减慢打包文件的构建速度；
   效果：
-  ![source-map](./1491559307755.png)
+  ![source-map](https://github.com/Feiyizhan/webpack-study/blob/master/image/.1491559307755.png)
 
  Chrome浏览器支持该选项，调试时会自动跳转到指定的源文件（未压缩的JS或者CSS等）
- ![Alt text](./1491559404537.png)
-![Alt text](./1491559425798.png)
+ ![Alt text](https://github.com/Feiyizhan/webpack-study/blob/master/image/.1491559404537.png)
+![Alt text](https://github.com/Feiyizhan/webpack-study/blob/master/image/.1491559425798.png)
 
 
 ###cheap-module-source-map

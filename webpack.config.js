@@ -1,8 +1,14 @@
 module.exports = {
-  devtool: 'source-map',//ÅäÖÃÉú³ÉSource Maps£¬Ñ¡ÔñºÏÊÊµÄÑ¡Ïî	
-  entry:  __dirname + "/app/main.js",//ÒÑ¶à´ÎÌá¼°µÄÎ¨Ò»Èë¿ÚÎÄ¼ş
+  devtool: 'source-map',//é…ç½®ç”ŸæˆSource Mapsï¼Œé€‰æ‹©åˆé€‚çš„é€‰é¡¹	
+  entry:  __dirname + "/app/main.js",//å·²å¤šæ¬¡æåŠçš„å”¯ä¸€å…¥å£æ–‡ä»¶
   output: {
-    path: __dirname + "/public",//´ò°üºóµÄÎÄ¼ş´æ·ÅµÄµØ·½
-    filename: "bundle.js"//´ò°üºóÊä³öÎÄ¼şµÄÎÄ¼şÃû
-  }
+    path: __dirname + "/public",//æ‰“åŒ…åçš„æ–‡ä»¶å­˜æ”¾çš„åœ°æ–¹
+    filename: "bundle.js"//æ‰“åŒ…åè¾“å‡ºæ–‡ä»¶çš„æ–‡ä»¶å
+  },
+  devServer: {
+    contentBase: "./public",//æœ¬åœ°æœåŠ¡å™¨æ‰€åŠ è½½çš„é¡µé¢æ‰€åœ¨çš„ç›®å½•
+    colors: true,//ç»ˆç«¯ä¸­è¾“å‡ºç»“æœä¸ºå½©è‰²
+    historyApiFallback: true,//ä¸è·³è½¬
+    inline: true//å®æ—¶åˆ·æ–°
+  } 
 }

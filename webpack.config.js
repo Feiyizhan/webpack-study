@@ -21,6 +21,10 @@ module.exports = {
  //       query: {  //Query转到.babelrc
  //         presets: ['es2015','react']
  //       }
+      },
+	  {
+        test: /\.css$/,
+        loader: 'style!css'//添加对样式表的处理
       }
     ]
   },

@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
   devtool: 'source-map',//配置生成Source Maps，选择合适的选项	
   entry:  __dirname + "/app/main2.js",//已多次提及的唯一入口文件
@@ -8,27 +10,18 @@ module.exports = {
   resolveLoader: {
         moduleExtensions: ['-loader']
   },
-  module: {//在配置文件里添加JSON loader
+  module: {
     loaders: [
-      {
-        test: /\.json$/,
-        loader: "json"
-      },
-	  {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'//在webpack的module部分的loaders里进行配置即可
- //       query: {  //Query转到.babelrc
- //         presets: ['es2015','react']
- //       }
-      },
-	  {
-        test: /\.css$/,
-        loader: 'style!css?modules'//跟前面相比就在后面加上了?modules
-      }
+      { test: /\.json$/, loader: "json" },
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
+      { test: /\.css$/, loader: 'style!css?modules'}
     ]
   },
-  
+
+
+  plugins: [
+    new webpack.BannerPlugin("Copyright Flying Unicorns inc.")//在这个数组中new一个就可以了
+  ],
   devServer: {
     contentBase: "./public",//本地服务器所加载的页面所在的目录
     colors: true,//终端中输出结果为彩色
